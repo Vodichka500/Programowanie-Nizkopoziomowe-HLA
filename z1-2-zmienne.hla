@@ -1,0 +1,15 @@
+program drugi;
+
+#include( "stdlib.hhf");
+static
+	zmienna1: int8 :=9;
+	zmienna2: int16 :=4532;
+	zmienna3: int32 :=-614264;
+	zmiennalogiczna: boolean;
+	falszlogiczny: boolean := false;
+	prawdalogiczna: boolean := true;
+
+begin drugi;
+
+	stdout.put ("Zmienna1 = ", zmienna1,nl," Zmienna2 = ", zmienna2, nl, "Wartosc zmiennej logicznej1 = ", falszlogiczny, nl);
+end drugi;

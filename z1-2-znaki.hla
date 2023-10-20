@@ -1,0 +1,12 @@
+program znaki;
+#include("stdlib.hhf")
+
+static
+	znak1: char;
+	znak2: char :='A';
+
+begin znaki;
+	stdout.put("Znak2: ", znak2, nl );
+	stdin.get(znak1);
+	stdout.put("Znak1: ", znak1);
+end znaki;

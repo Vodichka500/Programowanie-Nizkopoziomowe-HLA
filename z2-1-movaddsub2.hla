@@ -1,0 +1,49 @@
+program movaddsub2;
+	
+#include("stdlib.hhf");
+
+static
+	a1: int8 :=-7;
+	a2: int16 :=-277;
+	a3: int32 :=-66000;
+
+begin movaddsub2;
+
+	stdout.put("Poczatkowe wartosci: ");
+	stdout.put(" 1-bajtowa: ",a1, " ");
+	stdout.put(" 2-bajtowa: ",a2, " ");
+	stdout.put(" 3-bajtowa: ",a3, " ");
+	stdout.put(nl);
+	
+	
+	mov(a1, AL);
+	sub(a1, AL);
+	sub(a1, AL);
+	mov(AL, a1);
+
+	mov(a2, AX);
+	sub(a2, AX);
+	sub(a2, AX);
+	mov(AX, a2);
+	
+	mov(a3, EAX);
+	sub(a3, EAX);
+	sub(a3, EAX);
+	mov(EAX, a3);
+	
+	
+	stdout.put("Po zanegowaniu:      ");
+	stdout.put(" 1-bajtowa: ",a1, " ");
+	stdout.put(" 2-bajtowa: ",a2, " ");
+	stdout.put(" 3-bajtowa: ",a3, " ");
+	stdout.put(nl);
+
+	//mov(a3, EAX);
+	//add(666, EAX);
+	//mow(EAX, a3);
+	
+	add(666, a3);
+	
+	stdout.put("Po dodaniu 666 do zmiennej 3-bajtowej: ", a3);
+	
+end movaddsub2;

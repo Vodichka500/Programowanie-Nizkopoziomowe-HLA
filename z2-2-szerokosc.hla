@@ -1,0 +1,15 @@
+program szerokosc;
+
+#include("stdlib.hhf");
+
+static
+	a: int8 :=11;
+
+begin szerokosc;
+	
+	while(a != 0) do
+		dec(a);
+		stdout.put(a:3);
+	endwhile;
+	
+end szerokosc;

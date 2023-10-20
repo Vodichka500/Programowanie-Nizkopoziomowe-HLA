@@ -1,0 +1,25 @@
+program movaddsub;
+
+#include("stdlib.hhf");
+
+static
+  a: int8;
+  b: int8;
+
+begin movaddsub;
+  mov(-7, a);
+  mov(6, b);
+  stdout.put("Zmienna a: ", a, nl);
+  stdout.put("Zmienna b: ", b, nl);
+
+  mov(b, al);
+  sub(al, a);
+  
+  stdout.put("Wynik odejmowania (a - b): ", a, nl);
+
+  add(12, a);
+
+  stdout.put("Wynik dodawania (po dodaniu 12): ", a, nl);
+
+end movaddsub;
+

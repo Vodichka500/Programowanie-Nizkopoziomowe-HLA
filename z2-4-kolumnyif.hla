@@ -1,0 +1,24 @@
+program kolumnyif;
+#include("stdlib.hhf");
+
+static
+	
+	a:int8 :=40;
+	i:int8 :=0;
+	
+begin kolumnyif;
+
+	while(a != 0) do
+		if(i==5) then
+			stdout.put(nl);
+			mov(0, i);
+		endif;
+	
+		stdout.put(a:4);
+		dec(a);
+		
+		inc(i);
+	endwhile;
+
+end kolumnyif;
+	
