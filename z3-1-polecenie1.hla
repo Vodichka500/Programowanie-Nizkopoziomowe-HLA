@@ -1,0 +1,17 @@
+program polecenie1;
+
+#include ("stdlib.hhf");
+
+static
+	liczba: int8;
+
+begin polecenie1;
+	stdout.put("Podaj liczbe do zapisania w int8 ");
+	stdin.get(liczba);
+	stdout.put("Podaj liczbe do zapisania w rejestru Al ");
+	stdin.get(AL);
+	
+	stdout.put(liczba, nl);
+	stdout.put(AL);
+	
+end polecenie1;

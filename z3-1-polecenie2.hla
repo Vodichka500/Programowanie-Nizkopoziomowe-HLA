@@ -1,0 +1,13 @@
+program polecenie2;
+
+#include ("stdlib.hhf");
+
+static
+	zmienna1: int32;
+
+begin polecenie2;
+	stdout.put ("Wprowadz liczbe w zapisie HEX: ");
+	stdin.get ( eax );
+	mov ( eax, zmienna1 );
+	stdout.put ( "Wartosc ", eax, "H w zapisie DEC: ", zmienna1 , nl );
+end polecenie2;

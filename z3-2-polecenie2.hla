@@ -1,0 +1,13 @@
+program polecenie2;
+
+#include ("stdlib.hhf");
+
+static
+	zmienna1: int32;
+
+begin polecenie2;
+	stdin.get(eax);
+	stdout.put ( "Wartosc ",eax,"H"," w zapisie dziesietnym to: " );
+	stdout.puti32(eax);
+	
+end polecenie2;

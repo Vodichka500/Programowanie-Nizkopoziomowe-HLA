@@ -1,0 +1,15 @@
+program polecenie3;
+
+#include ("stdlib.hhf");
+
+static
+	zmienna1: int32;
+
+begin polecenie3;
+	stdout.put("wprowadz liczbe 32-bitowej w postaci szesnastkowej", nl);
+	stdin.geth32();	
+	mov(eax, zmienna1);
+	stdout.put("Zmienna int w postaci szesnastkowej:", nl);
+	stdout.puth32(zmienna1);
+	
+end polecenie3;
