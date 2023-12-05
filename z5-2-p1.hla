@@ -1,0 +1,18 @@
+program p2;
+#include ("stdlib.hhf");
+
+static
+	z: char;
+
+begin p2;
+	stdin.getc();
+	add(32, al);
+	mov(al, z);
+	stdout.put("Zamiana znaku przez rejestr: ",z,nl);
+	
+	sub(32, al);
+	xor(' ', al);
+	mov(al, z);
+	stdout.put("Zamiana znaku przez operacje logiczne: ",z,nl);
+	
+end p2;

@@ -1,0 +1,32 @@
+program p1;
+#include ("stdlib.hhf");
+
+static
+	a: real32 := -4.87660e-2;
+	b: real64 := 562.3456e1;
+	c: real80 := 3.14e-15;
+	
+begin p1;
+	stdout.put("Postac dziesietna", nl);
+	
+	stdout.put("	putr32, putr64, putr80", nl);
+		stdout.putr32(a,11,6,'@'); stdout.put(nl);
+		stdout.putr64(b,11,5,'@'); stdout.put(nl);
+		stdout.putr80(c,11,7,'@'); stdout.put(nl);
+	stdout.put("	stdout.put( : : ); ", nl);
+		stdout.put(a: 10: 5); stdout.put(nl);
+		stdout.put(b: 10: 5); stdout.put(nl);
+		stdout.put(c: 10: 5); stdout.put(nl);
+		
+	stdout.put("Postac wykladnicza", nl);
+	
+	stdout.put("	pute32, pute64, pute80", nl);
+		stdout.pute32(a, 15); stdout.put(nl);
+		stdout.pute64(b, 15); stdout.put(nl);
+		stdout.pute80(c, 15); stdout.put(nl);
+	stdout.put("	stdout.put()", nl );
+		stdout.put(a); stdout.put(nl);
+		stdout.put(b); stdout.put(nl);
+		stdout.put(c); stdout.put(nl);
+	
+end p1;

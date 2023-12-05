@@ -1,0 +1,30 @@
+program p4;
+#include ("stdlib.hhf");
+
+static
+	tab8: int8[10] := [0,1,2,3,4,5,6,7,8,9];
+	tab32: int32[10] := 10 dup [1];
+	
+begin p4;
+	stdout.put(nl, "tab1: ");
+	
+	for( mov(0, ebx); ebx<10; inc(ebx)) do
+		stdout.put(tab8[ebx], ", ");
+	endfor;
+	
+	stdout.put(nl, "tab2: ");
+	
+	for( mov(0, ebx); ebx<10; inc(ebx)) do
+		stdout.put(tab32[ebx*4], ", ");
+	endfor;
+	
+	stdout.put(nl);
+	
+	stdout.put("Podaj elementz tab1 (od 0 do 9) do kopiowania w tab2", nl);
+	stdin.get(ebx);
+	movsx(tab8[ebx], eax);
+	mov(eax, tab32[ebx*4]); 
+	for( mov(0, ebx); ebx<10; inc(ebx)) do
+		stdout.put(tab32[ebx*4], ", ");
+	endfor;
+end p4;

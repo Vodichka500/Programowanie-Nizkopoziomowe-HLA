@@ -1,0 +1,46 @@
+program rozszerzenie;
+#include ("stdlib.hhf");
+	static
+		zmienna1: int8;
+		zmienna2:int16;
+		zmienna3: int32;
+begin rozszerzenie;
+		stdout.put("Podaj liczbe", nl);
+		stdin.get(zmienna1);
+		
+		stdout.put("Wprowadzono: ",zmienna1);
+		stdout.put(" -> ");
+		stdout.puth8(zmienna1);
+		stdout.put(nl);
+		mov(zmienna1, al);
+		cbw();
+		mov(ax, zmienna2);
+		stdout.put("Do 16 bitow: ",zmienna2);
+		stdout.put(" -> ");
+		stdout.puth16(zmienna2);
+		stdout.put(nl);
+		
+		cwde();
+		mov(eax, zmienna3);
+		stdout.put("Do 32 bitow: ",zmienna3);
+		stdout.put(" -> ");
+		stdout.puth32(zmienna3);
+		stdout.put(nl);
+		
+		stdout.put("Za pomoca kopiowania", nl);
+		movsx(zmienna1, ax);
+		mov(ax, zmienna2);
+		
+		stdout.put("Do 16 bitow: ",zmienna2);
+		stdout.put(" -> ");
+		stdout.puth16(zmienna2);
+		stdout.put(nl);
+		
+		movsx(zmienna2, eax);
+		mov(eax, zmienna3);
+		stdout.put("Do 32 bitow: ",zmienna3);
+		stdout.put(" -> ");
+		stdout.puth32(zmienna3);
+		stdout.put(nl);
+		
+end rozszerzenie;

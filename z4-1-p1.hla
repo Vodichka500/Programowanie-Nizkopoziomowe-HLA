@@ -1,0 +1,35 @@
+program negacja;
+#include ("stdlib.hhf");
+	static
+		zmienna1: int8;
+		zmienna2:int8;
+begin negacja;
+		stdout.put("Podaj liczbe", nl);
+		stdin.get(zmienna1);
+		
+		stdout.put("Szesnastkowo: ");
+		stdout.puth8(zmienna1);		
+		stdout.put(nl);
+		
+		stdout.put("Po inversji: ");
+		not(zmienna1);
+		stdout.puth8(zmienna1);
+		stdout.put(nl);
+		
+		stdout.put("Po dodaniu jednosci: ");
+		inc(zmienna1);
+		stdout.puth8(zmienna1);
+		stdout.put(nl);
+		
+		stdout.put("dziesietnie: ");
+		stdout.put(zmienna1);
+		
+		stdout.put("Podaj liczbe", nl);
+		stdin.get(zmienna2);
+		neg(zmienna2);
+		stdout.put("Szesnastkowo: ", nl);
+		stdout.puth8(zmienna2);
+		stdout.put("dziesietnie: ", nl);
+		stdout.put(zmienna2);
+		
+end negacja;

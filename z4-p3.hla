@@ -1,0 +1,19 @@
+program p3;
+#include ("stdlib.hhf");
+#include ("excepts.hhf");
+static 
+	a:int8;
+	i:int8:=0;
+
+  
+begin p3;
+	while(i != 1) do
+		try
+			stdin.get(a);
+		exception( ex.ConversionError)
+			stdout.put("Blad podaj liczbe");
+		exception(ex.ValueOutOfRange)
+			stdout.put("Blad podaj liczbe z zakresu");
+		endtry;
+	endwhile;
+end p3;

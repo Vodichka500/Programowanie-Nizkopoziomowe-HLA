@@ -1,0 +1,14 @@
+program p1;
+#include ("stdlib.hhf");
+static
+	zmienna: int8;
+	temp: int8;
+begin p1;
+	mov(&zmienna, ebx);
+	stdout.put("Adres zmiennej: ", ebx,nl);
+	
+	mov(10, eax);
+	mov(eax, [ebx]);
+	
+	stdout.put("Wartosc zmiennej: ", zmienna);
+end p1;

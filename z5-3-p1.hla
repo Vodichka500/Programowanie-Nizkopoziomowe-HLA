@@ -1,0 +1,19 @@
+program po2;
+#include( "stdlib.hhf" );
+
+begin po2;
+	stdout.put(stdio.tab, "stdio.tab",nl);
+	stdout.put("stdio.bell",stdio.bell, nl);
+	stdout.put(stdio.bs,"stdio.bs", nl);
+	stdout.put(stdio.lf,"stdio.lf", nl);
+	stdout.put(stdio.cr,"stdio.cr", nl);
+	
+	stdout.put("Podaj slowo",nl);
+	stdin.flushInput();
+	repeat
+		stdin.getc();
+		stdout.put(stdio.tab);
+		stdout.putc(al);
+		stdout.put(nl);
+	until(stdin.eoln());
+end po2;
